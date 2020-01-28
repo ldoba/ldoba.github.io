@@ -406,9 +406,14 @@ header nav a:hover
     color: #777777;
     padding: 20px;
 }
+.triangle
+{
+    opacity: 0;
+}
 #menu-projets ul li:hover .triangle
 {
     background-color: #5cadd3;
+    opacity: 1;
 }
 #menu-projets ul li:hover
 {
