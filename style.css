@@ -115,7 +115,6 @@ h4
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
     background-color: white;
 }
 .logo
@@ -390,11 +389,16 @@ header nav a:hover
     padding: 0;
     font-family: 'roboto-Medium','sans serif';
     font-size: 18px;
-    width: 570px;
-    background-color: #e5e5e5;
     margin-bottom: 70px;
-    border-radius: 5%
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
 }
+
+#menu-projets ul {
+    background-color: #e5e5e5;
+}
+
 #menu-projets ul li
 {
     position: relative;
@@ -406,7 +410,10 @@ header nav a:hover
 {
     background-color: #5cadd3;
 }
-
+#menu-projets ul li:hover
+{
+    background-color: #5cadd3;
+}
 #menu-projets a:hover 
 {
     color: white;
@@ -414,13 +421,14 @@ header nav a:hover
 #menu-projets ul li .triangle
 {
     position: absolute;
-    width: 0; 
+    width: 0;
     height: 0; 
-    padding-left: 20px;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
     border-top: 10px solid #5cadd3;
     bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 
@@ -580,3 +588,21 @@ input[id="message"]
     width: 100%;
 }
 
+@media all and (max-device-width: 480px)
+{
+ 
+    .maps
+    {
+        opacity: 0;
+    }
+    .contact-info
+{
+    width: 400px;
+    height: 700px;
+    background-color: rgba(255,255,255,0.7);
+    position: absolute;
+    top:10%;
+    right: 25%;
+}
+    
+}
