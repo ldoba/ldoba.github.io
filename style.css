@@ -65,7 +65,11 @@
 { 
     margin: 0; padding: 0;
 }
-
+@viewport
+{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
 body
 {
     margin: 0;
@@ -550,7 +554,7 @@ input[type="text"]
 {
     padding: 10px;
     width: 300px;
-    color: #c1c0c0;
+    color: #777777;
     font-size: 20px;
     margin:15px;
     border: 1px solid #ddd;
@@ -560,6 +564,7 @@ input[type="text"]
 input[id="message"]
 {
     height: 150px;
+    
 }
 .button-3
 {
@@ -585,7 +590,7 @@ input[id="message"]
     text-align: center;
     margin: auto;
     width: 100%;
-    padding-bottom: 40px; 
+    padding-bottom: 10px; 
 }
 
 /*RESPONSIVE*/
@@ -615,8 +620,7 @@ input[id="message"]
     .far
     {
         opacity: 1;
-        
-}
+    }
     .maps
     {
         display: none;
@@ -631,5 +635,9 @@ input[id="message"]
     .contact-info h4, .contact-info p
     {   
         color:white;
+    }
+    .copyright
+    {
+        opacity: 0;
     }
 }
