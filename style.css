@@ -68,7 +68,6 @@
 @viewport
 {
     zoom: 1.0;
-    width: extend-to-zoom;
 }
 body
 {
@@ -275,6 +274,7 @@ header nav a:hover
     flex-wrap:wrap;
     margin:auto;
     margin-bottom: 50px;
+    max-width: 1200px;
 }
 #mac-image
 {
@@ -282,7 +282,7 @@ header nav a:hover
     background-position: left;
     width: 510px;
     height: 319px;
-    margin: 60px 10px;
+    margin:10px 10px;
 }
 .courbe
 {
@@ -316,6 +316,7 @@ header nav a:hover
     margin: 10px;
     width: 600px;
     height: 350px;
+    padding-left: 10px;
 }
 
 #services-body ul li i::after
@@ -590,6 +591,7 @@ input[id="message"]
     text-align: center;
     margin: auto;
     width: 100%;
+    height: 50px;
     padding-bottom: 10px; 
 }
 
@@ -612,6 +614,21 @@ input[id="message"]
     {
         display: grid;
         padding: 30px;
+    }
+    #mac-image
+    {
+       background-position: center;
+    }
+    #services-body ul li i::after, #services-body ul li i
+    {
+        display: none;
+    }
+    #services-body ul li p,  #services-body ul li h4
+    {
+        width: 380px;
+        height: 360px;
+        margin-left: 20px;
+        
     }
     .illustration-title
     {
