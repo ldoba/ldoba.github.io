@@ -155,6 +155,7 @@ header nav a:hover
 .en-tete
 {
     max-width: 600px;
+    padding: 20px;
     text-align: center;
     font-family: 'roboto-regular', 'sans serif';
     color:#777777;
@@ -238,7 +239,7 @@ header nav a:hover
 
 .flex-services
 {
-    margin-top: 100px;
+    margin-top:100px;
     align-items: center;
 }
 .flex-services h3
@@ -246,7 +247,7 @@ header nav a:hover
     position: relative;
     width: 400px;
     text-transform: uppercase;
-    margin: 0 auto 20px auto;
+    margin: 20px auto 20px auto;
     border-bottom: 0.5px solid #a2a2a2;
     padding-bottom: 20px;
 }
@@ -273,20 +274,17 @@ header nav a:hover
     display: flex;
     flex-wrap:wrap;
     margin:auto;
-    margin-bottom: 50px;
     max-width: 1200px;
 }
 #mac-image
 {
-    background-image: url(images/main-feature.png);
-    background-position: left;
-    width: 510px;
-    height: 319px;
-    margin:10px 10px;
+    flex-basis: 50%;
+    display:block;
 }
 .courbe
 {
-    position: absolute;
+
+    position: relative;
     top:15px;
     left: 0px;
     font-size: 40px;
@@ -295,27 +293,25 @@ header nav a:hover
     width: 40px;
     border: 1px solid #c1c0c0;
     border-radius: 100%;
-    margin-right: 60px;
+    margin-right: 30px;
     padding: 15px;
 }
 #services-body ul
 {
-    max-width: 700px;
-    max-height: 350px;
     align-items: center;
-    min-width: 400px;
     font-family: 'roboto-regular', 'sans serif';
     color:#777777;
     list-style: none;
-    display: flex;
-    flex-direction:column;
+    flex-basis: 50%;
+/*    display: flex;*/
+/*    flex-direction:column;*/
 }
 #services-body ul li
 {
     position: relative;
     margin: 10px;
-    width: 600px;
-    height: 350px;
+/*    min-width: 600px;*/
+/*    height: 350px;*/
     padding-left: 10px;
 }
 
@@ -332,21 +328,30 @@ header nav a:hover
 }
 #services-body ul li p
 {
-    position: absolute;
+/*    position: absolute;*/
     margin: 10px;
-    max-width: 600px;
-    max-height: 150px;
-    top: 30px;
-    left: 80px;
+    min-width: 50%;
+/*
+    top: 35%;
+    left: 15%;
+*/
 }
 #services-body ul li h4
 {
-    position: absolute;
+/*    position: absolute;*/
     margin: 10px;
-    max-width: 600px;
-    height: 50px;
-    top: 0px;
-    left: 80px;
+    max-width: 50%;
+/*
+    top: 10%;
+    left: 15%;
+*/
+}
+.steps {
+    display: flex;
+    align-items: center;
+}
+.step_description {
+    
 }
 /*NOS PROJETS*/
 
@@ -385,7 +390,6 @@ header nav a:hover
 #menu-projets
 {
     margin: auto;
-    padding: 0;
     font-family: 'roboto-Medium','sans serif';
     font-size: 18px;
     margin-bottom: 70px;
@@ -619,16 +623,11 @@ input[id="message"]
     {
        background-position: center;
     }
-    #services-body ul li i::after, #services-body ul li i
+    #services-body
     {
-        display: none;
-    }
-    #services-body ul li p,  #services-body ul li h4
-    {
-        width: 380px;
-        height: 360px;
-        margin-left: 20px;
-        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .illustration-title
     {
