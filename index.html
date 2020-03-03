@@ -2,10 +2,10 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport"
-        content="viewport-fit=cover, width=device-width, height=device-height, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+        <!--Le initial-scale=1.0 signifie au navigateur qu’il doit initialiser les dimensions en se basant sur le pixel-ratio du système, et le user-scalable=yes autorise l’utilisateur à zoomer s’il le souhaite-->
         <link href ="style.css" rel="stylesheet">
-        <link rel="shortcut icon" type="image/png" href="/images/ico/favicon.png"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
         <title>WebAgency</title>
         <script src="https://kit.fontawesome.com/7a98b36eb5.js" crossorigin="anonymous"></script>
     </head>
@@ -13,7 +13,7 @@
     <body>
         <!--Header-->
         <header class="header">
-            <div class="wrapper flex-wrapper">
+            <div class="header-wrapper">
                 <img src="images/logo.png" class="logo" alt="logo">
                 <nav>
                     <ul>
@@ -27,50 +27,44 @@
         </header>
         
         <!--Visionneuse-->
-        <section class="accueil">
-            <div class="wrapper flex-slider">
-                <div class="fleches">
+        <div class="slider">
+            <img src="images/slider/bg1.jpg" class="image-bg1" alt="slider picture">
+            <div class="fleches">
                     <i class="fas fa-angle-left fleche-gauche"></i>
                     <i class="fas fa-angle-right fleche-droite"></i>
-                </div>
-                <div class="texte-slider">
+            <div id="line"></div>
+            </div>
+            <div class="text-slider">
                     <h2><span class="Agence">WebAgency</span> : L'agence de tous<br>vos projets !</h2>
                     <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
                     <a href="#" class="button-1">Plus d'infos</a> 
-                </div>
             </div>
-        </section>
+        </div>
         
         <!--Les services-->
-        <section id="Services">
+        <section id="Services" class="wrapper">
             <div class="flex-services">
                 <h3>Nos services</h3>
                 <p class="en-tete">Nous sommes une agence digitale experte dans le web design, l'UX design, l'UI design et le SEO.
-</p>
+                </p>
             </div>
             <div id="services-body">
-                <img id="mac-image" src='images/main-feature.png'/>
+                <div id="mac-image"></div>
                 <ul>
-                    <li class="steps">
+                    <li id="step-1">
                         <i class="fas fa-chart-line courbe"></i>
-                        <div class="step_description">
-                            <h4>UX design</h4>
-                            <p>Avoir un bon design UX prend en compte les attentes et les besoins de l’internaute pour l’amener à concrétiser son action, le tout sans trop d’effort et dans un environnement fluide, agréable et rassurant.</p>
-                        </div>
+                        <h4>UX design</h4>
+                        <p>Avoir un bon design UX prend en compte les attentes et les besoins de l’internaute pour l’amener à concrétiser son action, le tout sans trop d’effort et dans un environnement fluide, agréable et rassurant.</p>
                     </li>
-                    <li class="steps">
-                        <i class="fas fa-chart-line courbe"></i>
-                        <div class="step_description">
-                            <h4>UI design</h4>
-                            <p>Rendez l’expérience de navigation sur votre site la plus intuitive possible via un design fonctionnel, qui inspire confiance et qui permette à l’utilisateur d’arriver à son but.</p>
-                        </div>
+                    <li id="step-2">
+                        <i class="fas fa-cubes courbe"></i>
+                        <h4>UI design</h4>
+                        <p>Rendez l’expérience de navigation sur votre site la plus intuitive possible via un design fonctionnel, qui inspire confiance et qui permette à l’utilisateur d’arriver à son but.</p>
                     </li>
-                    <li class="steps">
-                        <i class="fas fa-chart-line courbe"></i>
-                        <div class="step_description">
-                            <h4>SEO</h4>
-                            <p>Avec nos outils d'analyse et de suivi, votre site web sera optimisé et votre trafic multiplié.</p>
-                        </div>
+                    <li id="step-3">
+                        <i class="fas fa-chart-pie courbe"></i>
+                        <h4>SEO</h4>
+                        <p>Avec nos outils d'analyse et de suivi, votre site web sera optimisé et votre trafic multiplié.</p>
                     </li>
                 </ul>
             </div>
@@ -81,7 +75,7 @@
             <article>
                 <div class="wrapper">
                     <h3>Nos projets</h3>
-                    <p class="en-tete">Quelques exemples des projets que nous avons pu réaliser avec nos collaborateurs. Chaque projet nous permet d'en apprendre un peu plus sur les besoins et les envies des utilisateurs.</p>
+                    <p class="en-tete">Quelques exemples des projets que nous avons pu réaliser pour nos différents clients. Chaque projet nous permet d'en apprendre un peu plus sur les besoins et les envies des utilisateurs.</p>
                 </div>
             </article>
             
@@ -104,15 +98,14 @@
                         <a href="#" title="tous">Portfolio</a>
                         <span class="triangle"></span>
                     </li>
-                
                 </ul>
             </nav>
             
         <!--Grille des illustrations-->
-            <div class="grid-container wrapper">
+            <div class="grid-container">
                 <div class="illustration-listing">
                     <a class="illustration-title" href="#">
-                        Don't touch my eyebrows<br>Application de soins pour hommes</a>
+                        Don't touch my brows<br>Appli de soins pour hommes</a>
                     <div class="illustration-image">
                     <a href="#">
                     <img width="600" height="400" src="/images/portfolio/01.jpg" alt="Item-2"></a>
@@ -167,7 +160,7 @@
                 </div>
                 <div class="illustration-listing">
                     <a class="illustration-title" href="#">
-                        The Cool Company<br>Site d'illustrations et photographies</a>
+                        The Cool Company<br>Site d'illustrations</a>
                     <div class="illustration-image">
                     <a href="#">
                     <img width="600" height="400" src="/images/portfolio/07.jpg" alt="Item-2"></a>
@@ -187,8 +180,9 @@
         </section>
         <!--Contact-->
         <section id="contact">
-            <div class="wrapper">
-                <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2216096807224!2d2.347636915674888!3d48.87305177928887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25%20Rue%20d&#39;Hauteville%2C%2075010%20Paris!5e0!3m2!1sfr!2sfr!4v1576515288457!5m2!1sfr!2sfr"></iframe>
+            <!--Zone carte-->
+                <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.221609680723!2d2.3476369159738177!3d48.873051779288865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25%20Rue%20d&#39;Hauteville%2C%2075010%20Paris!5e0!3m2!1sfr!2sfr!4v1582300380037!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <!--Zone formulaire-->
                 <form method="post" action="traitement.php" class="contact-info">
                     <h4>Contact info</h4>
                     <p>WebAgency SAS<br>25 Rue d'Hauteville 75 010 Paris <br>Tel : 01 02 03 04 05</p>
@@ -201,10 +195,8 @@
                         <label for="message"></label>
                         <input type="text" id="message" placeholder="Message" name="message">
                         <input type="submit" value="Send message" name="submit" class="button-3">
-                    </form>
-            </div>
+                </form>
         </section>
-        
         <!--footer-->
         <footer>
             <div class="wrapper">
