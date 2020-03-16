@@ -39,6 +39,8 @@ h4{
     font-size: 20px;
     margin: 5px;
 }
+
+
 /*HEADER*/
 
 .header{
@@ -62,7 +64,7 @@ nav{
 header nav ul li{
     display:inline-block;
     color: #777777;
-    padding: 10px;
+    padding: 5px;
     border-top: 3px solid transparent;
 }
 header nav ul li:hover{
@@ -84,10 +86,10 @@ header nav a:hover{
 
 .slider{
     position: relative;
+    min-height: 300px;
 }
 .image-bg1{
     width: 100%;
-    height: auto;
 }
 #line {
     position: absolute;
@@ -152,7 +154,6 @@ header nav a:hover{
     transform: translateX(-80%);
     z-index: 1;
 }
-.
 .Agence{
     font-family: 'Roboto', 'sans serif';
     font-weight: 500;
@@ -180,6 +181,7 @@ header nav a:hover{
     border-radius: 3px;
     box-shadow: 0px 3px #588baa;
 }
+
 /*NOS SERVICES*/
 #Services{
     margin-top: 100px;
@@ -190,7 +192,7 @@ header nav a:hover{
 }
 .flex-services h3{
     position: relative;
-    width: 300px;
+    width: 260px;
     text-transform: uppercase;
     margin: 0 auto 20px auto;
     border-bottom: 0.5px solid #a2a2a2;
@@ -212,7 +214,7 @@ header nav a:hover{
 }
 .en-tete{
     max-width: 600px;
-    min-width: 300px;
+    min-width: 280px;
     padding: 0px 20px;
     text-align: center;
     font-family: 'Roboto', 'sans serif';
@@ -229,55 +231,60 @@ header nav a:hover{
     flex-wrap:wrap;
     margin:auto;
     margin-bottom: 50px;
-    max-width: 1200px;
+    max-width: 1280px;
 }
 #mac-image{
-    background-image: url(images/main-feature.png);
     background-position: left;
-    width: 510px;
-    height: 319px;
+    width: 100%;
+    max-width:510px;
     margin:10px 10px;
 }
+/*LISTE DES SERVICES*/
+
+#services-liste{
+    width: 100%;
+    max-width: 620px;
+    list-style: none;
+    padding: 5%;
+}
+#step-1{
+    display: flex;
+    align-items: stretch;
+    margin:auto;
+    padding-bottom: 5%;
+    align-items: center;
+}
+#step-2{
+    display: flex;
+    align-items: stretch;
+    margin:auto;
+    padding-bottom: 5%;
+    align-items: center;
+}
+#step-3{
+    display: flex;
+    align-items: stretch;
+    margin:auto;
+    align-items: center;
+}
 .courbe{
-    position: absolute;
-    top:15px;
-    left: 0px;
+    display: block;
+    position: relative;
     font-size: 40px;
     color: #5cadd3;
-    height: 40px;
-    width: 40px;
+    max-height: 40px;
+    max-width: 40px;
     border: 1px solid #c1c0c0;
     border-radius: 100%;
-    margin-right: 60px;
     padding: 15px;
+    flex-grow: 1;    
 }
-#services-body ul{
-    max-width: 700px;
-    max-height: 350px;
-    align-items: center;
-    min-width: 400px;
-    font-family: 'Roboto', 'sans serif';
-    font-weight: 400;
-    color:#777777;
-    list-style: none;
-    display: flex;
-    flex-direction:column;
-}
-#services-body ul li{
-    position: relative;
-    margin: 10px;
-    width: 600px;
-    height: 350px;
-    padding-left: 10px;
-}
-
-#services-body ul li i::after{
+#services-liste li i::after{
     position: absolute;
     content: "";
     border: 3px solid;
     border-color: white;
     background-color: #5cadd3;
-    color: #5cadd3;
     border-radius: 100%;
     font-size: 12px;
     width: 1em; 
@@ -286,22 +293,23 @@ header nav a:hover{
     left: 100%;
     transform: translate(-50%,-50%)
 }
-#services-body ul li p{
-    position: absolute;
-    margin: 10px;
+#services-liste li p{
+    padding-left: 5%;
     max-width: 600px;
-    max-height: 150px;
-    top: 30px;
-    left: 80px;
+    text-align:justify;
+    font-family: 'Roboto', 'sans serif';
+    font-weight: 400;
+    color:#777777;
+    flex-grow:9;
 }
-#services-body ul li h4{
-    position: absolute;
-    margin: 10px;
-    max-width: 600px;
-    height: 50px;
-    top: 0px;
-    left: 80px;
+.step-title{
+    height: auto;
+    font-family: 'Roboto','sans serif';
+    font-weight: 500;
+    color: black;
+    font-size: 20px;
 }
+
 /*NOS PROJETS*/
 
 #Portfolio{
@@ -466,13 +474,14 @@ img{
     z-index: 9;
 }
 .contact-info{
-    max-width: 350px;
+    width: 100%;
+    max-width: 300px;
     max-height: 800px;
     background-color: rgba(255,255,255,0.8);
     position: absolute;
     top:10%;
     right: 10%;
-    z-index: 10;
+    z-index: 5;
 }
 .contact-info h4{
     margin: 20px 15px;
@@ -490,10 +499,10 @@ img{
 }
 input[type="text"]{
     padding: 10px;
-    width: 300px;
+    max-width: 300px;
     color: #777777;
     font-size: 20px;
-    margin:15px;
+    margin:5%;
     border: 1px solid #ddd;
     border-radius:2px;
     font-family: 'Roboto', 'sans serif';
@@ -517,7 +526,9 @@ input[id="message"]{
     margin-left: 15px;
     margin-bottom: 20px;box-shadow: 0px 3px #588baa;
 }
-
+.button-2{
+        display: none;
+}
 /*FOOTER*/
 
 .Copyright{
@@ -531,9 +542,10 @@ input[id="message"]{
     padding-bottom: 10px; 
 }
 
-RESPONSIVE
+/*RESPONSIVE*/
 
-@media screen only and (max-width: 801px){
+@media screen and (max-width: 767px) {
+    /*Header*/
     .header-wrapper{
         justify-content: space-around;
         align-items: center;
@@ -541,38 +553,93 @@ RESPONSIVE
         flex-wrap: wrap;
         margin: 0% 10% 0% 10%;
     }
+    .image-bg1{
+        min-height: 300px;
+        object-fit: cover;
+    }
+    .text-slider h2{
+        font-size: 18px;
+    }
+    .text-slider p{
+        font-size:16px;
+    }
+    .button-1{
+        display: block;
+        font-family: 'Roboto', 'sans serif';
+        font-weight: 400;
+        height: 40px;
+        width: 100px;
+        margin-top: 20px;
+        background: #5cadd3;
+        color:white;
+        font-size: 14px;
+        text-align: center;
+        box-shadow: 0px 3px #588baa;
+    }
+    
+    /*nos services*/
+     .courbe{
+        display: block;
+        position: relative;
+        font-size: 20px;
+        color: #5cadd3;
+        max-height: 20px;
+        max-width: 20px;
+        border: 1px solid #c1c0c0;
+        border-radius: 100%;
+        padding: 10px;
+        flex-grow: 1;    
+    }
+    #services-liste li i::after{
+        border: 1px solid;
+        font-size: 8px;
+    }
+    /*Nos projets*/
     #menu-projets ul li{
         display: grid;
         padding: 30px;
+        text-align: center;
+    }   
+    /*contact*/
+    #contact{
+        display: block;
+        margin: auto;
+        background-color: white;
     }
-    #mac-image{
-       background-position: center;
+    .maps{
+        width: 100%; 
+        min-height: 800px;
+        margin-bottom: 50px;
+        opacity: 0.7;
+        z-index: 9;
     }
-    #services-body ul li i::after, #services-body ul li i{
-        display: none;
-    }
-    #services-body ul li p,  #services-body ul li h4{
-        width: 380px;
-        height: 360px;
-        margin-left: 20px;
-        
+    .contact-info{
+        top:10%;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .illustration-title{
         opacity: 1;
     }
-    .far{
-        opacity: 1;
-    }
-    .maps{
+    .button-2{
         display: none;
-    }
-    .contact-info{
-        background-color: #777777;;
-        top:10%;
-        left: 50%;
-        transform: translateX(50%);
-    }
-    .contact-info h4, .contact-info p{   
+        display: block;
+        font-family: 'Roboto', 'sans serif';
+        font-weight: 700;
+        height: 20px;
+        width: 140px;
+        background: #5cadd3;
         color:white;
+        font-size: 18px;
+        text-align: center;
+        border-radius: 3px;
+        margin: auto;        
+        box-shadow: 0px 3px #588baa;
     }
+
 }
+
+
+
+
+
